@@ -53,7 +53,7 @@ letters2huff = HuffEncode(english_freq_dict)
 huff2letters = reverse_dict(letters2huff)
 
 
-def encode_string(string, letters2huff):
+def encode_string(string, letters2huff = letters2huff):
     """Return a bitstring encoded according to the Huffman code defined in the dictionary letters2huff.
        If your resulting bitstring does not have a length which is a multiple of five, add the binary for
        SPACE characters until it is."""
@@ -71,7 +71,7 @@ def encode_string(string, letters2huff):
 
 
 
-def decode_string(coded_string, huff2letters):
+def decode_string(coded_string, huff2letters = huff2letters):
     """Translate from a Huffman coded string to a regular string"""
     
     # Your Code Here #
